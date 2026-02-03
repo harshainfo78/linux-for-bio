@@ -8,7 +8,11 @@
       
       
       
+        <link rel="canonical" href="https://harshainfo78.github.io/linux-for-bio/">
       
+      
+      
+        <link rel="next" href="day1/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -16,11 +20,14 @@
     
     
       
-        <title>Linux & HPC: A Quick Guided Tour (IBDC)</title>
+        <title>Linux for Biologists Workshop</title>
       
     
     
       <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -49,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -58,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux-hpc-a-quick-guided-tour" class="md-skip">
+        <a href="#day-1-mastering-the-linux-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -70,11 +84,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Linux &amp; HPC: A Quick Guided Tour (IBDC)" class="md-header__button md-logo" aria-label="Linux & HPC: A Quick Guided Tour (IBDC)" data-md-component="logo">
+    <a href="." title="Linux for Biologists Workshop" class="md-header__button md-logo" aria-label="Linux for Biologists Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -88,18 +100,44 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Linux & HPC: A Quick Guided Tour (IBDC)
+            Linux for Biologists Workshop
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Workshop Manual
+              Home
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -156,6 +194,93 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="day1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Day 1 - Fundamentals
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="day2.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Day 2 - Data Wrangling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="day3.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Day 3 - HPC & Jobs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -169,16 +294,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Linux &amp; HPC: A Quick Guided Tour (IBDC)" class="md-nav__button md-logo" aria-label="Linux & HPC: A Quick Guided Tour (IBDC)" data-md-component="logo">
+    <a href="." title="Linux for Biologists Workshop" class="md-nav__button md-logo" aria-label="Linux for Biologists Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Linux & HPC: A Quick Guided Tour (IBDC)
+    Linux for Biologists Workshop
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -204,7 +331,7 @@
   
   
   <span class="md-ellipsis">
-    Workshop Manual
+    Home
     
   </span>
   
@@ -217,7 +344,7 @@
   
   
   <span class="md-ellipsis">
-    Workshop Manual
+    Home
     
   </span>
   
@@ -240,18 +367,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ibdc-workshop-manual" class="md-nav__link">
+  <a href="#1-why-linux-000-030" class="md-nav__link">
     <span class="md-ellipsis">
-      IBDC – Workshop Manual
+      1. Why Linux? (0:00 - 0:30)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-workshop" class="md-nav__link">
+  <a href="#2-linux-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Why this workshop?
+      2. Linux Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-navigating-the-library-030-130" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Navigating the "Library" (0:30 - 1:30)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Navigating the &#34;Library&#34; (0:30 - 1:30)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-file-operations-130-230" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. File Operations (1:30 - 2:30)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-practical-exercise-230-300" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Practical Exercise (2:30 - 3:00)
     </span>
   </a>
   
@@ -261,6 +430,72 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="day1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 1 - Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="day2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 2 - Data Wrangling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="day3.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Day 3 - HPC & Jobs
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -292,18 +527,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ibdc-workshop-manual" class="md-nav__link">
+  <a href="#1-why-linux-000-030" class="md-nav__link">
     <span class="md-ellipsis">
-      IBDC – Workshop Manual
+      1. Why Linux? (0:00 - 0:30)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-workshop" class="md-nav__link">
+  <a href="#2-linux-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Why this workshop?
+      2. Linux Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-navigating-the-library-030-130" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Navigating the "Library" (0:30 - 1:30)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Navigating the &#34;Library&#34; (0:30 - 1:30)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-file-operations-130-230" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. File Operations (1:30 - 2:30)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-practical-exercise-230-300" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Practical Exercise (2:30 - 3:00)
     </span>
   </a>
   
@@ -325,108 +602,68 @@
 
 
 
-<h1 id="linux-hpc-a-quick-guided-tour">Linux &amp; HPC: A Quick Guided Tour</h1>
-<h2 id="ibdc-workshop-manual">IBDC – Workshop Manual</h2>
-<hr />
-<h2 id="why-this-workshop">Why this workshop?</h2>
-<p>With the rapid evolution of biological research and high-throughput technologies,
-biologists increasingly need computing skills to manage, analyse, and interpret
-large datasets.</p>
-<p>Although many tools provide graphical interfaces, command-line tools are often:
-- Faster
-- Reproducible
-- Essential for HPC systems</p>
-<hr />
-<h1 id="linux">🐧 LINUX</h1>
-<hr />
-<h2 id="introduction-to-linux">Introduction to Linux</h2>
-<p>Linux is a family of free and open-source operating systems based on the Linux kernel.
-The Linux kernel manages communication between software and hardware.</p>
-<p>A complete Linux system combines the kernel with software packages and utilities,
-together called Linux distributions.</p>
-<p>Examples:
-Ubuntu, Debian, Fedora, CentOS, RHEL</p>
-<hr />
-<h2 id="brief-history-of-linux">Brief History of Linux</h2>
-<p>Linux was created in 1991 by Linus Torvalds while studying at the University of Helsinki.
-It was inspired by UNIX (Minix) and developed as an open, community-driven system.</p>
-<hr />
-<h2 id="importance-of-linux">Importance of Linux</h2>
-<ul>
-<li>Free and open-source</li>
-<li>Stable and secure</li>
-<li>Highly customizable</li>
-<li>Widely used in servers and HPC</li>
-<li>Strong global community support</li>
-</ul>
-<p>Most bioinformatics tools run on Linux.</p>
-<hr />
-<h2 id="architecture-of-linux">Architecture of Linux</h2>
-<p>Linux follows a layered architecture:</p>
-<ol>
-<li>Kernel – manages CPU, memory, and devices  </li>
-<li>System Libraries – interface between applications and kernel  </li>
-<li>Shell – command-line interface  </li>
-<li>Hardware – CPU, RAM, storage, I/O  </li>
-<li>System Utilities – system management tools  </li>
-</ol>
-<hr />
-<h2 id="the-terminal">The Terminal</h2>
-<p>The terminal is a text-based interface used to interact with Linux.</p>
-<ul>
-<li>Terminal: input/output window</li>
-<li>Shell: command interpreter</li>
-<li>CLI: typed command interface</li>
-</ul>
-<p>To run a command, type it and press Enter.</p>
-<hr />
-<h2 id="linux-file-hierarchy-structure">Linux File Hierarchy Structure</h2>
-<p>Linux follows the Filesystem Hierarchy Standard (FHS).</p>
-<ul>
-<li>Root directory: /</li>
-<li>User home directories: /home/username</li>
-<li>Root user home: /root</li>
-</ul>
-<p>Common directories:</p>
+<h1 id="day-1-mastering-the-linux-environment">Day 1: Mastering the Linux Environment</h1>
+<p>Welcome to the first session. Today we move from the Mouse to the Keyboard.</p>
+<h2 id="1-why-linux-000-030">1. Why Linux? (0:00 - 0:30)</h2>
+<p>Linux is the standard for Bioinformatics because:
+* <strong>Stability:</strong> Can run for months without rebooting.
+* <strong>Performance:</strong> Handles 100GB+ genomic files easily.
+* <strong>Automation:</strong> Write once, run a thousand times.</p>
+<h2 id="2-linux-architecture">2. Linux Architecture</h2>
+<p>Linux consists of:
+1. <strong>The Kernel:</strong> The brain managing hardware.
+2. <strong>The Shell (Bash):</strong> Your translator.
+3. <strong>The Terminal:</strong> Your window to the shell.</p>
+<h2 id="3-navigating-the-library-030-130">3. Navigating the "Library" (0:30 - 1:30)</h2>
+<p>Everything in Linux starts from the <strong>Root (/)</strong>.</p>
+<h3 id="essential-commands">Essential Commands</h3>
 <table>
 <thead>
 <tr>
-<th>Directory</th>
-<th>Purpose</th>
+<th style="text-align: left;">Command</th>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>/bin</td>
-<td>Essential commands</td>
+<td style="text-align: left;"><code>pwd</code></td>
+<td style="text-align: left;">Where am I?</td>
+<td style="text-align: left;"><code>/home/harsha</code></td>
 </tr>
 <tr>
-<td>/etc</td>
-<td>Configuration files</td>
+<td style="text-align: left;"><code>ls -lh</code></td>
+<td style="text-align: left;">List files (human readable)</td>
+<td style="text-align: left;"><code>ls -lh data.fastq</code></td>
 </tr>
 <tr>
-<td>/home</td>
-<td>User files</td>
+<td style="text-align: left;"><code>cd</code></td>
+<td style="text-align: left;">Change directory</td>
+<td style="text-align: left;"><code>cd Documents</code></td>
 </tr>
 <tr>
-<td>/usr</td>
-<td>Applications</td>
-</tr>
-<tr>
-<td>/var</td>
-<td>Logs</td>
-</tr>
-<tr>
-<td>/tmp</td>
-<td>Temporary files</td>
+<td style="text-align: left;"><code>mkdir</code></td>
+<td style="text-align: left;">Create folder</td>
+<td style="text-align: left;"><code>mkdir my_project</code></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="the-linux-shell">The Linux Shell</h2>
-<p>When the shell opens, you see a prompt:</p>
-<p>```text
-username@hostname:~$</p>
+<h2 id="4-file-operations-130-230">4. File Operations (1:30 - 2:30)</h2>
+<p>Managing data without a mouse.</p>
+<ul>
+<li><strong>Copying:</strong> <code>cp source.txt destination.txt</code></li>
+<li><strong>Moving/Renaming:</strong> <code>mv old_name.txt new_name.txt</code></li>
+<li><strong>Deleting:</strong> <code>rm file.txt</code> (Careful! No recycle bin).</li>
+<li><strong>Reading:</strong> <code>head -n 10 file.txt</code> (See first 10 lines).</li>
+</ul>
+<h2 id="5-practical-exercise-230-300">5. Practical Exercise (2:30 - 3:00)</h2>
+<ol>
+<li>Open your terminal.</li>
+<li>Create a folder named <code>workshop_test</code>.</li>
+<li>Inside that folder, create a file named <code>hello.txt</code>.</li>
+<li>Write your name inside it using <code>echo "Your Name" &gt; hello.txt</code>.</li>
+<li>Check the content using <code>cat hello.txt</code>.</li>
+</ol>
 
 
 
@@ -475,7 +712,7 @@ username@hostname:~$</p>
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
