@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#list-files-in-a-directory" class="md-skip">
+        <a href="#1-configuration-mkdocsyml" class="md-skip">
           Skip to content
         </a>
       
@@ -288,8 +288,125 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuration-mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuration: mkdocs.yml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-homepage-docsindexmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Homepage: docs/index.md
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-part-1-docsarchitecturemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Part 1: docs/architecture.md
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-kernel-the-brain" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. The Kernel (The Brain)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-shell-the-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. The Shell (The Interpreter)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomy of a Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-directories-for-biologists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Directories for Biologists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-moving-around-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Moving Around (cd)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Moving Around (cd)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-listing-files-ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Listing Files (ls)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-creating-manipulating" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Creating &amp; Manipulating
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -305,135 +422,267 @@
 
 
 
-<p>Linux commands</p>
-<p>Like most operating systems, data in Linux systems is organized into files, which are further organized into directories (folders). Both files and folders can be navigated from the Graphical User Interface as you would on a Windows or a Mac system. However, most of the commands used for data analysis are required to be run from the Terminal (opened by pressing Ctrl + Alt + T), and thus, it is convenient to be able to handle files and folders from the Terminal as well. The following sections will give an overview about various commands that are regularly used when working with Linux systems. </p>
-<p>Note: you can view the manual (help) page of the commands by typing man followed by the command name. Press q to exit the manual page when done. For example, man ls would open the manual page for ls, the command to list files.</p>
-<p>Note: $ indicates the command prompt seen in the Terminal. It is not part of the command, instead it is an indication that the command that follows is to be entered on a Terminal. # indicates a comment to explain the command that follows</p>
-<p>Basic File and Folder Navigation</p>
-<p>Listing Files</p>
-<h1 id="list-files-in-a-directory">list files in a directory</h1>
-<p>$ ls</p>
-<h1 id="list-files-one-per-line">list files one per line</h1>
-<p>$ ls -1</p>
-<h1 id="list-in-the-long-format-with-details">list in the long format (with details)</h1>
-<p>$ ls –l</p>
-<h1 id="list-hidden-files-as-well">list hidden files as well</h1>
-<p>$ ls –a</p>
-<h1 id="recursively-list-directory-contents-including-any-subdirectories">recursively list directory contents (including any subdirectories)</h1>
-<p>$ ls –R</p>
-<h1 id="sort-by-time-modified-newest-first">sort by time modified (newest first)</h1>
-<p>$ ls –t</p>
-<p>Options can be combined</p>
-<h1 id="list-in-long-format-with-sizes-in-human-readable-format">list in long format, with sizes in human readable format</h1>
-<p>$ ls –lh</p>
-<h1 id="list-in-long-human-readable-format-sorted-by-time-modified-in-reverse-order-oldest-first">list in long, human readable format, sorted by time modified in reverse order (oldest first)</h1>
-<p>$ ls -lhtr</p>
-<p>Handling Directories</p>
-<h1 id="use-cd-followed-by-directory-to-change-directories">use cd followed by directory to change directories</h1>
-<p>$ cd <directory name></p>
-<h1 id="go-to-my_folder-in-the-current-directory">go to my_folder in the current directory</h1>
-<p>$ cd my_folder</p>
-<h1 id="typing-cd-without-any-directory-goes-to-home-directory">typing cd without any directory goes to home directory</h1>
-<p>$ cd        # goes to home directory</p>
-<h1 id="use-dot-and-dot-dot-to-refer-to-current-and-parent-directories-respectively">use . (dot) and ..(dot dot) to refer to current and parent directories respectively</h1>
-<h1 id="go-to-parent-directory">go to parent directory</h1>
-<p>$ cd ..</p>
-<h1 id="go-two-levels-above">go two levels above</h1>
-<p>$ cd ../..</p>
-<h1 id="go-to-last-working-directory">go to last working directory</h1>
-<p>$ cd –</p>
-<h1 id="get-the-present-working-directory-path">get the present working directory path</h1>
-<p>$ pwd</p>
-<h1 id="create-a-new-directory-with-desired-name-using-mkdir-make-directory">create a new directory with desired name using mkdir (make directory)</h1>
-<p>$ mkdir new_folder</p>
-<h1 id="copy-a-file-using-cp">copy a file using cp <source> <target></h1>
-<p>$ cp file1 file_copy</p>
-<h1 id="specify-path-to-generate-copies-in-a-different-folder">specify path to generate copies in a different folder</h1>
-<p>$ cp file1 my_folder/file1  # generates a copy of file1 in my_folder</p>
-<h1 id="move-or-rename-a-file-using-mv">move or rename a file using mv</h1>
-<p>$ mv file1 my_folder/file1  # move file1 from current folder to my_folder
-$ mv file1 file2            # rename file1 as file2</p>
-<h1 id="delete-files-using-rm">delete file(s) using rm</h1>
-<p>$ rm my_folder/file1        # delete file1 from my_folder
-$ rm file1 file2        # delete file1 and file2 from current directory</p>
-<p>View Files and File Information</p>
-<h1 id="count-number-of-words-in-a-file">count number of words in a file</h1>
-<p>$ wc file1      # prints lines, words, and characters in file1</p>
-<h1 id="specify-l-option-to-output-only-number-of-lines">specify –l option to output only number of lines</h1>
-<p>$ wc –l file1       # prints number of lines in file1</p>
-<h1 id="print-first-10-lines-of-a-file">print first 10 lines of a file</h1>
-<p>$ head file1</p>
-<h1 id="print-first-n-lines-of-a-file">print first n lines of a file</h1>
-<p>$ head –n 100 file1 # prints first 100 lines of file1</p>
-<h1 id="print-last-10-lines-of-a-file">print last 10 lines of a file</h1>
-<p>$ tail file1</p>
-<h1 id="print-last-n-lines-of-a-file">print last n lines of a file</h1>
-<p>$ tail –n 50 file1  # prints last 50 lines of file1</p>
-<h1 id="print-starting-from-nth-line">print starting from nth line</h1>
-<p>$ tail –n +2 file1  # print from second line of file1 (useful for removing headers)</p>
-<h1 id="print-the-entire-file-to-screen-using-cat-stands-for-concatenate">print the entire file to screen using cat (stands for concatenate)</h1>
-<p>$ cat file1</p>
-<h1 id="as-the-name-suggests-cat-can-be-used-to-merge-multiple-files">as the name suggests, cat can be used to merge multiple files</h1>
-<p>$ cat file1 file2   # prints both file1 and file2 in succession
-$ cat file1 file2 &gt; file3   # merges file1 and file2 into file3</p>
-<h1 id="print-file-page-by-page">print file page by page</h1>
-<p>$ more file1    # use spacebar to go to next page, Enter to go to next line, q to quit</p>
-<p>File manipulation</p>
-<h1 id="get-required-columns-from-file-using-cut">get required columns from file using cut</h1>
-<p>$ cut –f 1,4 file.tsv   # get 1st and 4th columns from a tab-separated file
-$ cut –f 1-3 file.tsv   # get 1st to 3rd columns from file.tsv using range (-)
-$ cut –d ‘ ‘ –f 2 file1 # set delimiter to space instead of tab, and get second column</p>
-<h1 id="join-columns-using-paste-command">join columns using paste command</h1>
-<p>$ paste file1 file2 &gt; file3 # merge file1 and file2 row-wise and store in file3</p>
-<h1 id="sort-files-by-column">sort files by column</h1>
-<p>$ sort file1    # sort file1 by first column (default is dictionary order)
-$ sort –n file1     # perform numerical sort on first column of file1
-$ sort –nr file1        # same as above, but in descending order
-$ sort –nr –k 4 file1   # sort by 4th column (using space as delimiter)
-$ sort –V file1     # perform version sort (useful to sort chromosomes)</p>
-<h1 id="sort-on-the-14th-column-in-descending-order-numerical-separator-to-be-considered-is-tab">sort on the 14th column in descending order (numerical). Separator to be considered is tab</h1>
-<p>$ sort -t $'\t' -nr -k 14 mastersheet.txt</p>
-<h1 id="use-awk-to-read-a-file-line-by-line-and-perform-some-manipulation-on-each-line">use awk to read a file line by line and perform some manipulation on each line</h1>
-<h1 id="the-following-command-subtracts-the-value-in-column-2-from-column-3-of-a-bed-file-and-prints-it-out">The following command subtracts the value in column 2 from column 3 of a bed file and prints it out</h1>
-<p>$ awk '{print $3-$2}' file.bed</p>
-<h1 id="use-0-to-refer-to-the-whole-line-and-followed-by-a-number-to-access-that-column-the-default-delimiter-is-space-which-can-be-changed-using-f-option">Use $0 to refer to the whole line, and $ followed by a number to access that column. The default delimiter is space, which can be changed using –F option</h1>
-<p>$ awk –F “\t” ‘{print $0”\t”$3-$2}’ file1.tsv &gt; file2.tsv</p>
-<h1 id="the-above-command-takes-a-tab-separated-file-file1tsv-calculates-the-difference-between-its-2nd-and-3rd-columns-and-prints-it-as-an-extra-column-at-the-end-of-each-line-in-file2tsv">The above command takes a tab-separated file (file1.tsv), calculates the difference between its 2nd and 3rd columns, and prints it as an extra column at the end of each line in file2.tsv</h1>
-<h1 id="find-lines-matching-a-pattern-or-text-using-grep">find lines matching a pattern or text using grep</h1>
-<p>$ grep ‘chr1’ peaks.tsv # get all lines with the text chr1 in peaks.tsv</p>
-<h1 id="use-w-option-to-search-by-exact-words">use –w option to search by exact words</h1>
-<p>$ grep –w ‘chr1’ peaks.tsv  # get only chr1 lines and not chr10, chr11 and so on</p>
-<p>Meta Characters
-The following are a few characters that have special meaning in the Terminal</p>
-<h1 id="use-to-match-one-or-more-optional-characters">use * to match one or more optional characters</h1>
-<p>$ ls <em>.fastq    # list all files with the extension .fastq
-$ wc –l </em>.peaks # count the number of lines in all files with the extension .peaks</p>
-<h1 id="use-to-redirect-output-to-another-file">use &gt; to redirect output to another file</h1>
-<p>$ cat file1 file2 &gt; file3   # merge file1 and file2 into file3
-$ ls *.fastq &gt; fastq_list   # list files with extension .fastq and store in a file called fastq_list</p>
-<h1 id="use-to-append-to-a-file-rather-than-overwriting">use &gt;&gt; to append to a file rather than overwriting</h1>
-<p>$ ls <em>.txt &gt; file_list      # list all .txt files to file_list
-$ ls </em>.tsv &gt;&gt; file_list # add all .tsv files to file_list instead of deleting the previous file</p>
-<h1 id="use-called-a-pipe-to-join-multiple-commands-the-output-of-the-previous-command-becomes-the-input-of-the-next-command">use | (called a pipe) to join multiple commands. The output of the previous command becomes the input of the next command</h1>
-<p>$ ls *.fastq | wc –l    # list all .fastq files and count their number
-$ cut –f 3 file.tsv | sort &gt; sorted.txt # extract 3rd column from file.tsv, sort the column and store in sorted.txt</p>
-<p>Miscellaneous</p>
-<h1 id="clear-the-screen">clear the screen</h1>
-<p>$ clear</p>
-<h1 id="create-a-new-empty-file">create a new empty file</h1>
-<p>$ touch file1</p>
-<h1 id="rewrite-output-back-into-original-file-using-sponge">rewrite output back into original file using sponge</h1>
-<h1 id="note-this-will-change-the-original-file-and-it-cannot-be-regained">note - this will change the original file and it cannot be regained</h1>
-<p>$ cut –f 1-3 file.tsv | sponge file.tsv # retain only the first three columns of file.tsv</p>
-<h1 id="unzip-a-zip-file">unzip a .zip file</h1>
-<p>$ unzip archive.zip</p>
-<h1 id="zip-a-file-using-gzip-compression-adds-a-gz-extension">zip a file using gzip compression (adds a .gz extension)</h1>
-<p>$ gzip reads.fastq</p>
-<h1 id="unzip-a-gz-file">unzip a .gz file</h1>
-<p>$ gunzip reads.fastq.gz</p>
-<h1 id="print-a-gz-file-like-cat-but-for-gz-files">print a .gz file (like cat, but for .gz files)</h1>
-<p>$ zcat reads.fastq.gz
-$ zcat reads.fastq.gz | more    # print a .gz file page by page</p>
+  <h1>Home</h1>
+
+<p>Based on your request and the detailed sources provided, here is the <strong>MkDocs code</strong> specifically designed for <strong>Day 1 (The 3-Hour Foundation Session)</strong>.</p>
+<p>This structure is designed to serve two purposes:
+1.  <strong>Presentation Material:</strong> Large diagrams and clear bullet points for the live workshop.
+2.  <strong>Future Guide:</strong> Detailed explanations, warnings, and a reference table for users to check later.</p>
+<h3 id="1-configuration-mkdocsyml"><strong>1. Configuration: <code>mkdocs.yml</code></strong></h3>
+<p><em>This enables the visual diagrams (Mermaid) and the "Material" theme.</em></p>
+<pre><code class="language-yaml">site_name: Linux for Biologists - Day 1
+site_description: 3-Hour Intensive: Architecture &amp; Navigation
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: indigo
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - navigation.sections
+
+nav:
+  - Workshop Start: index.md
+  - Part 1: Architecture &amp; Concepts: architecture.md
+  - Part 2: The File System Tree: filesystem.md
+  - Part 3: Navigation &amp; Action: navigation.md
+  - Day 1 Cheat Sheet: reference.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+</code></pre>
+<hr />
+<h3 id="2-homepage-docsindexmd"><strong>2. Homepage: <code>docs/index.md</code></strong></h3>
+<p><em>Introduction to the session context.</em></p>
+<pre><code class="language-markdown"># Day 1: The Foundation (3 Hours)
+
+**Welcome to the Linux &amp; HPC Workshop.** 
+
+In this first 3-hour session, we will transition from the graphical interface you are used to (Windows/Mac) to the command line environment required for modern bioinformatics.
+
+### Why are we here?
+As noted in *Mastering Linux and High-Performance Computing*, modern biology requires handling high-throughput data. While graphical interfaces exist, command-line operations are:
+*   **Efficient:** Handle tasks automatically and quickly.
+*   **Scalable:** Necessary for cloud servers and HPC.
+*   **Reproducible:** Scriptable analysis for scientific accuracy.
+
+### Session Agenda
+1.  **The &quot;Onion&quot; Architecture:** Understanding the Kernel and Shell.
+2.  **The Tree:** How Linux stores data (Filesystem Hierarchy Standard).
+3.  **Navigation:** Moving through folders without a mouse.
+</code></pre>
+<hr />
+<h3 id="3-part-1-docsarchitecturemd"><strong>3. Part 1: <code>docs/architecture.md</code></strong></h3>
+<p><em>First, we present the concepts (Theory).</em></p>
+<pre><code class="language-markdown"># Part 1: The Linux Architecture
+
+Before typing commands, we must understand the environment. Linux is not just one program; it is a layered system.
+
+## The Layered Structure
+Linux architecture defines how components interact to manage resources. Think of it like an &quot;onion&quot; with layers.
+
+```mermaid
+graph TD
+    User((User / Applications)) --&gt; Shell[The Shell: CLI]
+    Shell --&gt; Kernel[The Kernel: The Brain]
+    Kernel --&gt; HW[Hardware: CPU, RAM, Disk]
+
+    style Kernel fill:#f96,stroke:#333,stroke-width:2px
+    style Shell fill:#61dafb,stroke:#333,stroke-width:2px
+</code></pre>
+<h3 id="1-the-kernel-the-brain">1. The Kernel (The Brain)</h3>
+<p>The kernel is the core. It manages hardware (RAM, CPU) and prevents conflicts between programs.</p>
+<h3 id="2-the-shell-the-interpreter">2. The Shell (The Interpreter)</h3>
+<p>The Shell is a program that exposes the operating system to you.
+*   It acts as a <strong>bridge</strong>: You type a command, the shell interprets it, and sends it to the kernel.
+*   <strong>The Terminal:</strong> This is the text-window you are looking at. The <em>Shell</em> is the program running inside it.</p>
+<p>!!! note "Kernel vs. Distro"
+    The <strong>Kernel</strong> is the core technology. A <strong>Distribution (Distro)</strong> (like Ubuntu, CentOS, or Red Hat) is the kernel combined with software packages to make a usable operating system.</p>
+<hr />
+<h2 id="anatomy-of-a-command">Anatomy of a Command</h2>
+<p>When you type in the shell, you follow a specific syntax:</p>
+<p><code>Command</code> + <code>Options</code> + <code>Arguments</code></p>
+<p><strong>Example from Source:</strong> <code>ls -l --sort time Documents/</code></p>
+<pre><code class="language-mermaid">graph LR
+    A[ls] -- &quot;Command&quot; --&gt; Action(List Files)
+    B[-l] -- &quot;Option/Flag&quot; --&gt; Format(Long Format)
+    C[Documents/] -- &quot;Argument&quot; --&gt; Target(Target Folder)
+
+    style A fill:#f9f,stroke:#333
+    style B fill:#ff9,stroke:#333
+    style C fill:#9f9,stroke:#333
+</code></pre>
+<ul>
+<li><strong>Command:</strong> What you want to do.</li>
+<li><strong>Option (Switch):</strong> Modifies behavior (starts with <code>-</code> or <code>--</code>).</li>
+<li><strong>Argument:</strong> What the command operates on (a file or folder).</li>
+</ul>
+<pre><code>
+---
+
+### **4. Part 2: `docs/filesystem.md`**
+*Next, we show the map of the system.*
+
+```markdown
+# Part 2: The Filesystem Hierarchy
+
+In Windows/Mac, you see folders. In Linux, we visualize an **Inverted Tree**.
+
+## The Filesystem Hierarchy Standard (FHS)
+Everything in Linux starts at the **Root** directory, represented by a forward slash `/`. 
+
+!!! warning &quot;Root vs. Root User&quot;
+    *   `/` is the **Root Directory** (the start of the filesystem).
+    *   `/root` is the home folder for the administrator user.
+    *   They are different!
+
+### Visualizing the Tree
+According to the FHS, specific directories serve specific functions.
+
+```mermaid
+graph TD
+    Root[&quot;/ (Root)&quot;] --&gt; Bin[&quot;/bin &lt;br&gt;(Binaries/Apps)&quot;]
+    Root --&gt; Home[&quot;/home &lt;br&gt;(User Folders)&quot;]
+    Root --&gt; Var[&quot;/var &lt;br&gt;(Logs/Data)&quot;]
+    Root --&gt; Tmp[&quot;/tmp &lt;br&gt;(Temporary)&quot;]
+
+    Home --&gt; User1[&quot;/home/ibdc&quot;]
+    Home --&gt; User2[&quot;/home/rcb&quot;]
+    Home --&gt; User3[&quot;/home/ucsd&quot;]
+
+    style Root fill:#ef5350,stroke:#333,stroke-width:2px
+    style Home fill:#42a5f5,stroke:#333,stroke-width:2px
+</code></pre>
+<h3 id="key-directories-for-biologists">Key Directories for Biologists</h3>
+<ul>
+<li><code>/home</code>: Where your personal data lives. If you log in as <strong>ibdc</strong>, you land in <code>/home/ibdc</code>.</li>
+<li><code>/bin</code>: Where commands like <code>ls</code> and <code>cp</code> live.</li>
+<li><code>/var</code>: Variable data (log files).</li>
+<li><code>/mnt</code> or <code>/media</code>: External hard drives.</li>
+</ul>
+<pre><code>
+---
+
+### **5. Part 3: `docs/navigation.md`**
+*Finally, the practical guide for future usage.*
+
+```markdown
+# Part 3: Navigation &amp; Basic Operations
+
+**Goal:** Learn to move around the &quot;Tree&quot; and create files.
+
+## 1. Where am I? (`pwd`)
+You are always in a &quot;Current Working Directory.&quot; To see it, type:
+```bash
+pwd
+# Output example: /home/ibdc
+</code></pre>
+<ul>
+<li><code>/home</code> is the parent folder.</li>
+<li><code>ibdc</code> is your current folder.</li>
+</ul>
+<h2 id="2-moving-around-cd">2. Moving Around (<code>cd</code>)</h2>
+<p>To change directories, use <code>cd</code>. You can use <strong>Absolute</strong> or <strong>Relative</strong> paths.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Path Type</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Absolute</strong></td>
+<td style="text-align: left;">Full address starting from Root <code>/</code>. Always works.</td>
+<td style="text-align: left;"><code>cd /home/ibdc/data</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Relative</strong></td>
+<td style="text-align: left;">Directions starting from <em>here</em>.</td>
+<td style="text-align: left;"><code>cd data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="critical-shortcuts">Critical Shortcuts</h3>
+<ul>
+<li><code>cd ~</code> : Teleport straight to your <strong>Home</strong> directory.</li>
+<li><code>cd ..</code> : Move <strong>Up</strong> one level (from <code>/home/ibdc</code> to <code>/home</code>).</li>
+<li><code>cd -</code> : Go back to the previous folder you were in.</li>
+</ul>
+<h2 id="3-listing-files-ls">3. Listing Files (<code>ls</code>)</h2>
+<p>To see what is in a folder. Options allow you to see details.</p>
+<ul>
+<li><code>ls</code> : Simple list.</li>
+<li><code>ls -l</code> : <strong>Long</strong> format (shows size, date, permissions).</li>
+<li><code>ls -lt</code> : Sort by <strong>Time</strong> (newest first).</li>
+<li><code>ls -a</code> : Show <strong>All</strong> (including hidden files starting with <code>.</code>).</li>
+</ul>
+<h2 id="4-creating-manipulating">4. Creating &amp; Manipulating</h2>
+<p>Now that we can move, let's touch data.</p>
+<ul>
+<li><strong>Create Folder:</strong> <code>mkdir new_folder</code></li>
+<li><strong>Create Empty File:</strong> <code>touch file.txt</code></li>
+<li><strong>Copying:</strong><ul>
+<li><code>cp file.txt copy.txt</code> (File copy)</li>
+<li><code>cp -r data_folder/ backup_folder/</code> (Recursive copy for folders)</li>
+</ul>
+</li>
+<li><strong>Moving/Renaming:</strong><ul>
+<li><code>mv file.txt /tmp/</code> (Move to tmp)</li>
+<li><code>mv old.txt new.txt</code> (Rename)</li>
+</ul>
+</li>
+</ul>
+<p>!!! danger "Deleting Files"
+    The <code>rm</code> command deletes files <strong>permanently</strong>. 
+    *   <code>rm file.txt</code> deletes a file.
+    *   <code>rm -r foldername</code> deletes a folder and everything inside it.</p>
+<pre><code>
+---
+
+### **6. Reference: `docs/reference.md`**
+*A quick lookup table for the participants.*
+
+```markdown
+# Day 1 Cheat Sheet
+
+*Derived from &quot;Essential Guide to Linux Terminal Commands&quot;*.
+
+## Navigation
+| Command | Action |
+| :--- | :--- |
+| `pwd` | Show current directory path |
+| `cd /` | Go to Root directory |
+| `cd ~` | Go to Home directory |
+| `cd ..` | Go up one level |
+| `cd -` | Go to previous working directory |
+
+## Listing &amp; Files
+| Command | Action |
+| :--- | :--- |
+| `ls -lh` | List files with details + human readable sizes (KB/MB) |
+| `ls -t` | List sorted by time (newest first) |
+| `mkdir [name]` | Create a new directory |
+| `cp -r [src] [dst]` | Copy a directory recursively |
+| `mv [src] [dst]` | Move or Rename a file |
+| `rm -r [dir]` | Remove a directory (**Permanent!**) |
+
+## Shortcuts
+| Key | Action |
+| :--- | :--- |
+| `Tab` | Autocomplete file names |
+| `Ctrl+C` | Stop/Kill the current command |
+| `Ctrl+L` | Clear the screen (same as `clear`) |
+| `Up Arrow` | See previous commands |
+</code></pre>
 
 
 
