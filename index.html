@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-1-linux-fundamentals-for-biologists" class="md-skip">
+        <a href="#linux-hpc-workshop-day-1-foundation" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 1: Linux Fundamentals for Biologists
+              Linux &amp; HPC Workshop: Day 1 Foundation
             
           </span>
         </div>
@@ -298,28 +298,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-why-linux-for-biology-30-mins" class="md-nav__link">
+  <a href="#1-workshop-purpose-context" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Why Linux for Biology? (30 mins)
+      1. Workshop Purpose &amp; Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Workshop Purpose &amp; Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-biologists-need-the-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Biologists Need the Command Line
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-navigating-the-digital-lab-the-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Navigating the "Digital Lab" (The Map)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Navigating the &#34;Digital Lab&#34; (The Map)">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#essential-navigation-commands" class="md-nav__link">
+  <a href="#reducing-anxiety" class="md-nav__link">
     <span class="md-ellipsis">
-      Essential Navigation Commands
+      Reducing Anxiety
     </span>
   </a>
   
@@ -331,28 +331,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-managing-data-without-a-mouse-the-action" class="md-nav__link">
+  <a href="#2-part-1-the-linux-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Managing Data Without a Mouse (The Action)
+      2. Part 1: The Linux Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Managing Data Without a Mouse (The Action)">
+    <nav class="md-nav" aria-label="2. Part 1: The Linux Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#viewing-data" class="md-nav__link">
+  <a href="#anatomy-of-a-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing Data
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#file-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Operations
+      Anatomy of a Command
     </span>
   </a>
   
@@ -364,18 +355,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-practical-hands-on-exercise-60-mins" class="md-nav__link">
+  <a href="#3-part-2-the-filesystem-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Practical Hands-on Exercise (60 mins)
+      3. Part 2: The Filesystem Hierarchy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-pro-tips-for-speed" class="md-nav__link">
+  <a href="#4-part-3-navigation-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Pro-Tips for Speed
+      4. Part 3: Navigation &amp; Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Part 3: Navigation &amp; Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-day-1-command-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Day 1 Command Reference
     </span>
   </a>
   
@@ -397,102 +421,111 @@
 
 
 
-<h1 id="day-1-linux-fundamentals-for-biologists">Day 1: Linux Fundamentals for Biologists</h1>
-<p>Welcome to your first day of the IBDC-HPC Workshop. Today, we bridge the gap between biological data and computational power.</p>
+<h1 id="linux-hpc-workshop-day-1-foundation">Linux &amp; HPC Workshop: Day 1 Foundation</h1>
+<p>Welcome to the <strong>Linux &amp; HPC Intensive</strong>. [cite_start]This single-page guide covers the architecture, filesystem, and navigation essentials required for modern bioinformatics[cite: 213, 236].</p>
 <hr />
-<h2 id="1-why-linux-for-biology-30-mins">1. Why Linux for Biology? (30 mins)</h2>
-<p>Traditional operating systems often fail when handling large-scale genomic data.</p>
+<h2 id="1-workshop-purpose-context">1. Workshop Purpose &amp; Context</h2>
+<h3 id="why-biologists-need-the-command-line">Why Biologists Need the Command Line</h3>
+<p>[cite_start]As high-throughput technologies evolve, biologists face an increasing need for bioinformatics skills to manage massive datasets[cite: 236].
+* [cite_start]<strong>Efficiency:</strong> The Shell allows tasks to be done automatically and quickly[cite: 238].
+* [cite_start]<strong>Reproduction:</strong> Proper commands allow you to repeat tasks exactly as many times as needed[cite: 239].
+* [cite_start]<strong>Scale:</strong> Essential for interacting with High-Performance Computing (HPC) systems[cite: 333].</p>
+<h3 id="reducing-anxiety">Reducing Anxiety</h3>
 <ul>
-<li><strong>Massive File Handling:</strong> Linux can read a 50GB FASTQ file in milliseconds, whereas Excel or Notepad would crash.</li>
-<li><strong>Stability:</strong> Linux systems are built to run for months, perfect for long-running bioinformatics pipelines.</li>
-<li><strong>Reproducibility:</strong> Every command you type can be saved in a script, ensuring your experiment can be repeated exactly by others.</li>
+<li>[cite_start]<strong>Mistakes are normal:</strong> Making errors is part of the process[cite: 403].</li>
+<li>[cite_start]<strong>Safety:</strong> You cannot damage the hardware through normal commands[cite: 272].</li>
+<li>[cite_start]<strong>Documentation:</strong> You are not expected to memorize everything; use this guide as a reference[cite: 330, 424].</li>
 </ul>
 <hr />
-<h2 id="2-navigating-the-digital-lab-the-map">2. Navigating the "Digital Lab" (The Map)</h2>
-<p>Think of the Linux directory tree as your lab's storage room. Everything starts from the <strong>Root (/)</strong>.</p>
-<h3 id="essential-navigation-commands">Essential Navigation Commands</h3>
+<h2 id="2-part-1-the-linux-architecture">2. Part 1: The Linux Architecture</h2>
+<p>[cite_start]Linux is a layered system where components interact to manage resources and execute programs[cite: 259, 260].</p>
+<ol>
+<li>[cite_start]<strong>Hardware Layer:</strong> The physical components (CPU, RAM, HDD)[cite: 270, 271].</li>
+<li>[cite_start]<strong>The Kernel:</strong> The "brain" that manages hardware and prevents program conflicts[cite: 246, 261, 262].</li>
+<li>[cite_start]<strong>The Shell:</strong> An interpreter that acts as a bridge, forwarding your requests to the kernel[cite: 267, 268].</li>
+<li>[cite_start]<strong>The Terminal:</strong> The interactive text window where you type commands and see results[cite: 279, 284].</li>
+</ol>
+<h3 id="anatomy-of-a-command">Anatomy of a Command</h3>
+<p>[cite_start]Every command follows a specific grammar: <strong>Command + Options + Arguments</strong>[cite: 312, 334].</p>
+<p>[cite_start]<code>ls  -l  --sort  time  Documents/</code> [cite: 314]</p>
+<ul>
+<li>[cite_start]<strong>Command (<code>ls</code>):</strong> The action you want to perform[cite: 315].</li>
+<li>[cite_start]<strong>Option/Flag (<code>-l</code>):</strong> Modifies behavior, such as switching to "long" format[cite: 316, 317].</li>
+<li>[cite_start]<strong>Argument (<code>Documents/</code>):</strong> The object the command operates on[cite: 322, 323].</li>
+</ul>
+<hr />
+<h2 id="3-part-2-the-filesystem-hierarchy">3. Part 2: The Filesystem Hierarchy</h2>
+<p>[cite_start]Linux organizes data in a hierarchical "Inverted Tree" called the Filesystem Hierarchy Standard (FHS)[cite: 289, 346].</p>
+<ul>
+<li><strong><code>/</code> (Root):</strong> The top-most directory. [cite_start]Everything starts here[cite: 292, 349, 350].</li>
+<li>[cite_start]<strong><code>/home</code>:</strong> Contains the personal directories for regular users[cite: 295, 348].</li>
+<li>[cite_start]<strong><code>/bin</code>:</strong> Important binary applications and commands[cite: 300].</li>
+<li>[cite_start]<strong><code>/tmp</code></strong>: Temporary files that may be cleared upon reboot[cite: 300].</li>
+</ul>
+<hr />
+<h2 id="4-part-3-navigation-operations">4. Part 3: Navigation &amp; Operations</h2>
+<p>Directories are like <strong>places</strong>. [cite_start]At any time, you are in exactly one place called your "Current Working Directory"[cite: 353].</p>
+<h3 id="essential-navigation">Essential Navigation</h3>
+<ul>
+<li>[cite_start]<strong><code>pwd</code></strong>: <strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory (Where am I?)[cite: 352, 355].</li>
+<li>[cite_start]<strong><code>cd</code></strong>: <strong>C</strong>hange <strong>D</strong>irectory[cite: 370, 414].<ul>
+<li>[cite_start]<code>cd ~</code>: Teleport to your <strong>Home</strong> directory[cite: 378, 379].</li>
+<li>[cite_start]<code>cd ..</code>: Move <strong>up</strong> one level in the tree[cite: 382].</li>
+<li>[cite_start]<code>cd -</code>: Return to the previous folder[cite: 425].</li>
+</ul>
+</li>
+<li>[cite_start]<strong><code>ls -lhtr</code></strong>: List files in long format, human-readable, sorted by time (oldest first)[cite: 312, 425].</li>
+</ul>
+<h3 id="file-manipulation">File Manipulation</h3>
+<ul>
+<li>[cite_start]<strong><code>mkdir &lt;name&gt;</code></strong>: Create a new folder[cite: 415, 425].</li>
+<li>[cite_start]<strong><code>cp -r &lt;src&gt; &lt;dest&gt;</code></strong>: Copy a file or directory recursively[cite: 417, 425].</li>
+<li>[cite_start]<strong><code>mv &lt;src&gt; &lt;dest&gt;</code></strong>: Move or <strong>rename</strong> a file[cite: 416, 425].</li>
+<li><strong><code>rm -rf &lt;name&gt;</code></strong>: <strong>Danger Zone.</strong> Forcefully and permanently remove data. [cite_start]There is no recycle bin[cite: 418, 419, 425].</li>
+</ul>
+<hr />
+<h2 id="5-day-1-command-reference">5. Day 1 Command Reference</h2>
 <table>
 <thead>
 <tr>
+<th style="text-align: left;">Task</th>
 <th style="text-align: left;">Command</th>
-<th style="text-align: left;">Biology Context</th>
-<th style="text-align: left;">What it does</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>pwd</code></td>
-<td style="text-align: left;">"Which shelf am I at?"</td>
-<td style="text-align: left;"><strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory (shows your current path).</td>
+<td style="text-align: left;"><strong>Get Help</strong></td>
+<td style="text-align: left;"><code>man &lt;tool&gt;</code></td>
+<td style="text-align: left;">[cite_start]Open the manual; type <strong><code>q</code></strong> to quit[cite: 330, 331].</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>ls -lh</code></td>
-<td style="text-align: left;">"Check the inventory."</td>
-<td style="text-align: left;"><strong>L</strong>ist files with <strong>h</strong>uman-readable sizes (MB/GB).</td>
+<td style="text-align: left;"><strong>Search</strong></td>
+<td style="text-align: left;"><code>grep &lt;pattern&gt;</code></td>
+<td style="text-align: left;">[cite_start]Find specific text inside a file[cite: 425].</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>cd</code></td>
-<td style="text-align: left;">"Walk to a new room."</td>
-<td style="text-align: left;"><strong>C</strong>hange <strong>D</strong>irectory (e.g., <code>cd raw_data/</code>).</td>
+<td style="text-align: left;"><strong>Inspect</strong></td>
+<td style="text-align: left;"><code>head / tail</code></td>
+<td style="text-align: left;">[cite_start]View the first or last 10 lines of a file[cite: 425].</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>mkdir</code></td>
-<td style="text-align: left;">"Set up a new bench."</td>
-<td style="text-align: left;"><strong>M</strong>ake <strong>D</strong>irectory (e.g., <code>mkdir mouse_project</code>).</td>
+<td style="text-align: left;"><strong>Stop</strong></td>
+<td style="text-align: left;"><code>Ctrl + C</code></td>
+<td style="text-align: left;">[cite_start]Halt the current running command[cite: 425].</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>History</strong></td>
+<td style="text-align: left;"><code>Ctrl + R</code></td>
+<td style="text-align: left;">[cite_start]Search through your previous commands[cite: 425].</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Find</strong></td>
+<td style="text-align: left;"><code>find . -name "*.txt"</code></td>
+<td style="text-align: left;">[cite_start]Search for files by name patterns[cite: 388, 389].</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="3-managing-data-without-a-mouse-the-action">3. Managing Data Without a Mouse (The Action)</h2>
-<p>In bioinformatics, we rarely click "Save As." Instead, we use commands to manipulate files.</p>
-<h3 id="viewing-data">Viewing Data</h3>
-<ul>
-<li><strong>Peek at DNA reads:</strong> Don't open the whole file; just look at the top.<ul>
-<li><code>head -n 4 sample.fastq</code> (Shows the first sequence read).</li>
-</ul>
-</li>
-<li><strong>Check the end of a log:</strong><ul>
-<li><code>tail -n 10 analysis.log</code> (See if your process finished).</li>
-</ul>
-</li>
-</ul>
-<h3 id="file-operations">File Operations</h3>
-<ul>
-<li><strong>Back up raw data:</strong> Always keep a copy before you start filtering.<ul>
-<li><code>cp raw_seq.fastq raw_seq_backup.fastq</code>.</li>
-</ul>
-</li>
-<li><strong>Organizing files:</strong><ul>
-<li><code>mv results.txt ./final_output/</code> (Moves the file to the results folder).</li>
-</ul>
-</li>
-<li><strong>Deleting (Warning!):</strong><ul>
-<li><code>rm temp_file.txt</code> (There is no recycle bin in Linux. It is gone forever!).</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="4-practical-hands-on-exercise-60-mins">4. Practical Hands-on Exercise (60 mins)</h2>
-<p>Follow these steps in your terminal to create your first workspace.</p>
-<ol>
-<li><strong>Create your folder:</strong>
-    <code>mkdir workshop_practice</code></li>
-<li><strong>Enter the folder:</strong>
-    <code>cd workshop_practice</code></li>
-<li><strong>Create a dummy sequence:</strong>
-    <code>echo "ATGCATGCATGC" &gt; dna_sequence.txt</code></li>
-<li><strong>Confirm the file exists:</strong>
-    <code>ls -l</code></li>
-<li><strong>Check your current location:</strong>
-    <code>pwd</code> (Ensure you see <code>/home/harsha/workshop_practice</code>).</li>
-</ol>
-<hr />
-<h2 id="5-pro-tips-for-speed">5. Pro-Tips for Speed</h2>
-<ul>
-<li><strong>Tab Completion:</strong> Type the first 3 letters of a folder name and hit <strong>Tab</strong>. Linux will finish the word for you!.</li>
-<li><strong>Command History:</strong> Use the <strong>Up Arrow</strong> key to find commands you typed earlier.</li>
-<li><strong>Naming Rule:</strong> Never use spaces in filenames (e.g., use <code>mouse_data.txt</code>, not <code>mouse data.txt</code>).</li>
-</ul>
 
 
 
