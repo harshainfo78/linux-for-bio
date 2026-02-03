@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux-hpc-workshop-day-1-foundation" class="md-skip">
+        <a href="#list-files-in-a-directory" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux &amp; HPC Workshop: Day 1 Foundation
+              Home
             
           </span>
         </div>
@@ -291,122 +291,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-workshop-purpose-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Workshop Purpose &amp; Context
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Workshop Purpose &amp; Context">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-biologists-need-the-command-line" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Biologists Need the Command Line
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reducing-anxiety" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reducing Anxiety
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-part-1-the-linux-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Part 1: The Linux Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Part 1: The Linux Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#anatomy-of-a-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anatomy of a Command
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-part-2-the-filesystem-hierarchy" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Part 2: The Filesystem Hierarchy
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-part-3-navigation-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Part 3: Navigation &amp; Operations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Part 3: Navigation &amp; Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#essential-navigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Essential Navigation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#file-manipulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      File Manipulation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-day-1-command-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Day 1 Command Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -421,111 +305,135 @@
 
 
 
-<h1 id="linux-hpc-workshop-day-1-foundation">Linux &amp; HPC Workshop: Day 1 Foundation</h1>
-<p>Welcome to the <strong>Linux &amp; HPC Intensive</strong>. [cite_start]This single-page guide covers the architecture, filesystem, and navigation essentials required for modern bioinformatics[cite: 213, 236].</p>
-<hr />
-<h2 id="1-workshop-purpose-context">1. Workshop Purpose &amp; Context</h2>
-<h3 id="why-biologists-need-the-command-line">Why Biologists Need the Command Line</h3>
-<p>[cite_start]As high-throughput technologies evolve, biologists face an increasing need for bioinformatics skills to manage massive datasets[cite: 236].
-* [cite_start]<strong>Efficiency:</strong> The Shell allows tasks to be done automatically and quickly[cite: 238].
-* [cite_start]<strong>Reproduction:</strong> Proper commands allow you to repeat tasks exactly as many times as needed[cite: 239].
-* [cite_start]<strong>Scale:</strong> Essential for interacting with High-Performance Computing (HPC) systems[cite: 333].</p>
-<h3 id="reducing-anxiety">Reducing Anxiety</h3>
-<ul>
-<li>[cite_start]<strong>Mistakes are normal:</strong> Making errors is part of the process[cite: 403].</li>
-<li>[cite_start]<strong>Safety:</strong> You cannot damage the hardware through normal commands[cite: 272].</li>
-<li>[cite_start]<strong>Documentation:</strong> You are not expected to memorize everything; use this guide as a reference[cite: 330, 424].</li>
-</ul>
-<hr />
-<h2 id="2-part-1-the-linux-architecture">2. Part 1: The Linux Architecture</h2>
-<p>[cite_start]Linux is a layered system where components interact to manage resources and execute programs[cite: 259, 260].</p>
-<ol>
-<li>[cite_start]<strong>Hardware Layer:</strong> The physical components (CPU, RAM, HDD)[cite: 270, 271].</li>
-<li>[cite_start]<strong>The Kernel:</strong> The "brain" that manages hardware and prevents program conflicts[cite: 246, 261, 262].</li>
-<li>[cite_start]<strong>The Shell:</strong> An interpreter that acts as a bridge, forwarding your requests to the kernel[cite: 267, 268].</li>
-<li>[cite_start]<strong>The Terminal:</strong> The interactive text window where you type commands and see results[cite: 279, 284].</li>
-</ol>
-<h3 id="anatomy-of-a-command">Anatomy of a Command</h3>
-<p>[cite_start]Every command follows a specific grammar: <strong>Command + Options + Arguments</strong>[cite: 312, 334].</p>
-<p>[cite_start]<code>ls  -l  --sort  time  Documents/</code> [cite: 314]</p>
-<ul>
-<li>[cite_start]<strong>Command (<code>ls</code>):</strong> The action you want to perform[cite: 315].</li>
-<li>[cite_start]<strong>Option/Flag (<code>-l</code>):</strong> Modifies behavior, such as switching to "long" format[cite: 316, 317].</li>
-<li>[cite_start]<strong>Argument (<code>Documents/</code>):</strong> The object the command operates on[cite: 322, 323].</li>
-</ul>
-<hr />
-<h2 id="3-part-2-the-filesystem-hierarchy">3. Part 2: The Filesystem Hierarchy</h2>
-<p>[cite_start]Linux organizes data in a hierarchical "Inverted Tree" called the Filesystem Hierarchy Standard (FHS)[cite: 289, 346].</p>
-<ul>
-<li><strong><code>/</code> (Root):</strong> The top-most directory. [cite_start]Everything starts here[cite: 292, 349, 350].</li>
-<li>[cite_start]<strong><code>/home</code>:</strong> Contains the personal directories for regular users[cite: 295, 348].</li>
-<li>[cite_start]<strong><code>/bin</code>:</strong> Important binary applications and commands[cite: 300].</li>
-<li>[cite_start]<strong><code>/tmp</code></strong>: Temporary files that may be cleared upon reboot[cite: 300].</li>
-</ul>
-<hr />
-<h2 id="4-part-3-navigation-operations">4. Part 3: Navigation &amp; Operations</h2>
-<p>Directories are like <strong>places</strong>. [cite_start]At any time, you are in exactly one place called your "Current Working Directory"[cite: 353].</p>
-<h3 id="essential-navigation">Essential Navigation</h3>
-<ul>
-<li>[cite_start]<strong><code>pwd</code></strong>: <strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory (Where am I?)[cite: 352, 355].</li>
-<li>[cite_start]<strong><code>cd</code></strong>: <strong>C</strong>hange <strong>D</strong>irectory[cite: 370, 414].<ul>
-<li>[cite_start]<code>cd ~</code>: Teleport to your <strong>Home</strong> directory[cite: 378, 379].</li>
-<li>[cite_start]<code>cd ..</code>: Move <strong>up</strong> one level in the tree[cite: 382].</li>
-<li>[cite_start]<code>cd -</code>: Return to the previous folder[cite: 425].</li>
-</ul>
-</li>
-<li>[cite_start]<strong><code>ls -lhtr</code></strong>: List files in long format, human-readable, sorted by time (oldest first)[cite: 312, 425].</li>
-</ul>
-<h3 id="file-manipulation">File Manipulation</h3>
-<ul>
-<li>[cite_start]<strong><code>mkdir &lt;name&gt;</code></strong>: Create a new folder[cite: 415, 425].</li>
-<li>[cite_start]<strong><code>cp -r &lt;src&gt; &lt;dest&gt;</code></strong>: Copy a file or directory recursively[cite: 417, 425].</li>
-<li>[cite_start]<strong><code>mv &lt;src&gt; &lt;dest&gt;</code></strong>: Move or <strong>rename</strong> a file[cite: 416, 425].</li>
-<li><strong><code>rm -rf &lt;name&gt;</code></strong>: <strong>Danger Zone.</strong> Forcefully and permanently remove data. [cite_start]There is no recycle bin[cite: 418, 419, 425].</li>
-</ul>
-<hr />
-<h2 id="5-day-1-command-reference">5. Day 1 Command Reference</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Task</th>
-<th style="text-align: left;">Command</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Get Help</strong></td>
-<td style="text-align: left;"><code>man &lt;tool&gt;</code></td>
-<td style="text-align: left;">[cite_start]Open the manual; type <strong><code>q</code></strong> to quit[cite: 330, 331].</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Search</strong></td>
-<td style="text-align: left;"><code>grep &lt;pattern&gt;</code></td>
-<td style="text-align: left;">[cite_start]Find specific text inside a file[cite: 425].</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Inspect</strong></td>
-<td style="text-align: left;"><code>head / tail</code></td>
-<td style="text-align: left;">[cite_start]View the first or last 10 lines of a file[cite: 425].</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Stop</strong></td>
-<td style="text-align: left;"><code>Ctrl + C</code></td>
-<td style="text-align: left;">[cite_start]Halt the current running command[cite: 425].</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>History</strong></td>
-<td style="text-align: left;"><code>Ctrl + R</code></td>
-<td style="text-align: left;">[cite_start]Search through your previous commands[cite: 425].</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Find</strong></td>
-<td style="text-align: left;"><code>find . -name "*.txt"</code></td>
-<td style="text-align: left;">[cite_start]Search for files by name patterns[cite: 388, 389].</td>
-</tr>
-</tbody>
-</table>
+<p>Linux commands</p>
+<p>Like most operating systems, data in Linux systems is organized into files, which are further organized into directories (folders). Both files and folders can be navigated from the Graphical User Interface as you would on a Windows or a Mac system. However, most of the commands used for data analysis are required to be run from the Terminal (opened by pressing Ctrl + Alt + T), and thus, it is convenient to be able to handle files and folders from the Terminal as well. The following sections will give an overview about various commands that are regularly used when working with Linux systems. </p>
+<p>Note: you can view the manual (help) page of the commands by typing man followed by the command name. Press q to exit the manual page when done. For example, man ls would open the manual page for ls, the command to list files.</p>
+<p>Note: $ indicates the command prompt seen in the Terminal. It is not part of the command, instead it is an indication that the command that follows is to be entered on a Terminal. # indicates a comment to explain the command that follows</p>
+<p>Basic File and Folder Navigation</p>
+<p>Listing Files</p>
+<h1 id="list-files-in-a-directory">list files in a directory</h1>
+<p>$ ls</p>
+<h1 id="list-files-one-per-line">list files one per line</h1>
+<p>$ ls -1</p>
+<h1 id="list-in-the-long-format-with-details">list in the long format (with details)</h1>
+<p>$ ls –l</p>
+<h1 id="list-hidden-files-as-well">list hidden files as well</h1>
+<p>$ ls –a</p>
+<h1 id="recursively-list-directory-contents-including-any-subdirectories">recursively list directory contents (including any subdirectories)</h1>
+<p>$ ls –R</p>
+<h1 id="sort-by-time-modified-newest-first">sort by time modified (newest first)</h1>
+<p>$ ls –t</p>
+<p>Options can be combined</p>
+<h1 id="list-in-long-format-with-sizes-in-human-readable-format">list in long format, with sizes in human readable format</h1>
+<p>$ ls –lh</p>
+<h1 id="list-in-long-human-readable-format-sorted-by-time-modified-in-reverse-order-oldest-first">list in long, human readable format, sorted by time modified in reverse order (oldest first)</h1>
+<p>$ ls -lhtr</p>
+<p>Handling Directories</p>
+<h1 id="use-cd-followed-by-directory-to-change-directories">use cd followed by directory to change directories</h1>
+<p>$ cd <directory name></p>
+<h1 id="go-to-my_folder-in-the-current-directory">go to my_folder in the current directory</h1>
+<p>$ cd my_folder</p>
+<h1 id="typing-cd-without-any-directory-goes-to-home-directory">typing cd without any directory goes to home directory</h1>
+<p>$ cd        # goes to home directory</p>
+<h1 id="use-dot-and-dot-dot-to-refer-to-current-and-parent-directories-respectively">use . (dot) and ..(dot dot) to refer to current and parent directories respectively</h1>
+<h1 id="go-to-parent-directory">go to parent directory</h1>
+<p>$ cd ..</p>
+<h1 id="go-two-levels-above">go two levels above</h1>
+<p>$ cd ../..</p>
+<h1 id="go-to-last-working-directory">go to last working directory</h1>
+<p>$ cd –</p>
+<h1 id="get-the-present-working-directory-path">get the present working directory path</h1>
+<p>$ pwd</p>
+<h1 id="create-a-new-directory-with-desired-name-using-mkdir-make-directory">create a new directory with desired name using mkdir (make directory)</h1>
+<p>$ mkdir new_folder</p>
+<h1 id="copy-a-file-using-cp">copy a file using cp <source> <target></h1>
+<p>$ cp file1 file_copy</p>
+<h1 id="specify-path-to-generate-copies-in-a-different-folder">specify path to generate copies in a different folder</h1>
+<p>$ cp file1 my_folder/file1  # generates a copy of file1 in my_folder</p>
+<h1 id="move-or-rename-a-file-using-mv">move or rename a file using mv</h1>
+<p>$ mv file1 my_folder/file1  # move file1 from current folder to my_folder
+$ mv file1 file2            # rename file1 as file2</p>
+<h1 id="delete-files-using-rm">delete file(s) using rm</h1>
+<p>$ rm my_folder/file1        # delete file1 from my_folder
+$ rm file1 file2        # delete file1 and file2 from current directory</p>
+<p>View Files and File Information</p>
+<h1 id="count-number-of-words-in-a-file">count number of words in a file</h1>
+<p>$ wc file1      # prints lines, words, and characters in file1</p>
+<h1 id="specify-l-option-to-output-only-number-of-lines">specify –l option to output only number of lines</h1>
+<p>$ wc –l file1       # prints number of lines in file1</p>
+<h1 id="print-first-10-lines-of-a-file">print first 10 lines of a file</h1>
+<p>$ head file1</p>
+<h1 id="print-first-n-lines-of-a-file">print first n lines of a file</h1>
+<p>$ head –n 100 file1 # prints first 100 lines of file1</p>
+<h1 id="print-last-10-lines-of-a-file">print last 10 lines of a file</h1>
+<p>$ tail file1</p>
+<h1 id="print-last-n-lines-of-a-file">print last n lines of a file</h1>
+<p>$ tail –n 50 file1  # prints last 50 lines of file1</p>
+<h1 id="print-starting-from-nth-line">print starting from nth line</h1>
+<p>$ tail –n +2 file1  # print from second line of file1 (useful for removing headers)</p>
+<h1 id="print-the-entire-file-to-screen-using-cat-stands-for-concatenate">print the entire file to screen using cat (stands for concatenate)</h1>
+<p>$ cat file1</p>
+<h1 id="as-the-name-suggests-cat-can-be-used-to-merge-multiple-files">as the name suggests, cat can be used to merge multiple files</h1>
+<p>$ cat file1 file2   # prints both file1 and file2 in succession
+$ cat file1 file2 &gt; file3   # merges file1 and file2 into file3</p>
+<h1 id="print-file-page-by-page">print file page by page</h1>
+<p>$ more file1    # use spacebar to go to next page, Enter to go to next line, q to quit</p>
+<p>File manipulation</p>
+<h1 id="get-required-columns-from-file-using-cut">get required columns from file using cut</h1>
+<p>$ cut –f 1,4 file.tsv   # get 1st and 4th columns from a tab-separated file
+$ cut –f 1-3 file.tsv   # get 1st to 3rd columns from file.tsv using range (-)
+$ cut –d ‘ ‘ –f 2 file1 # set delimiter to space instead of tab, and get second column</p>
+<h1 id="join-columns-using-paste-command">join columns using paste command</h1>
+<p>$ paste file1 file2 &gt; file3 # merge file1 and file2 row-wise and store in file3</p>
+<h1 id="sort-files-by-column">sort files by column</h1>
+<p>$ sort file1    # sort file1 by first column (default is dictionary order)
+$ sort –n file1     # perform numerical sort on first column of file1
+$ sort –nr file1        # same as above, but in descending order
+$ sort –nr –k 4 file1   # sort by 4th column (using space as delimiter)
+$ sort –V file1     # perform version sort (useful to sort chromosomes)</p>
+<h1 id="sort-on-the-14th-column-in-descending-order-numerical-separator-to-be-considered-is-tab">sort on the 14th column in descending order (numerical). Separator to be considered is tab</h1>
+<p>$ sort -t $'\t' -nr -k 14 mastersheet.txt</p>
+<h1 id="use-awk-to-read-a-file-line-by-line-and-perform-some-manipulation-on-each-line">use awk to read a file line by line and perform some manipulation on each line</h1>
+<h1 id="the-following-command-subtracts-the-value-in-column-2-from-column-3-of-a-bed-file-and-prints-it-out">The following command subtracts the value in column 2 from column 3 of a bed file and prints it out</h1>
+<p>$ awk '{print $3-$2}' file.bed</p>
+<h1 id="use-0-to-refer-to-the-whole-line-and-followed-by-a-number-to-access-that-column-the-default-delimiter-is-space-which-can-be-changed-using-f-option">Use $0 to refer to the whole line, and $ followed by a number to access that column. The default delimiter is space, which can be changed using –F option</h1>
+<p>$ awk –F “\t” ‘{print $0”\t”$3-$2}’ file1.tsv &gt; file2.tsv</p>
+<h1 id="the-above-command-takes-a-tab-separated-file-file1tsv-calculates-the-difference-between-its-2nd-and-3rd-columns-and-prints-it-as-an-extra-column-at-the-end-of-each-line-in-file2tsv">The above command takes a tab-separated file (file1.tsv), calculates the difference between its 2nd and 3rd columns, and prints it as an extra column at the end of each line in file2.tsv</h1>
+<h1 id="find-lines-matching-a-pattern-or-text-using-grep">find lines matching a pattern or text using grep</h1>
+<p>$ grep ‘chr1’ peaks.tsv # get all lines with the text chr1 in peaks.tsv</p>
+<h1 id="use-w-option-to-search-by-exact-words">use –w option to search by exact words</h1>
+<p>$ grep –w ‘chr1’ peaks.tsv  # get only chr1 lines and not chr10, chr11 and so on</p>
+<p>Meta Characters
+The following are a few characters that have special meaning in the Terminal</p>
+<h1 id="use-to-match-one-or-more-optional-characters">use * to match one or more optional characters</h1>
+<p>$ ls <em>.fastq    # list all files with the extension .fastq
+$ wc –l </em>.peaks # count the number of lines in all files with the extension .peaks</p>
+<h1 id="use-to-redirect-output-to-another-file">use &gt; to redirect output to another file</h1>
+<p>$ cat file1 file2 &gt; file3   # merge file1 and file2 into file3
+$ ls *.fastq &gt; fastq_list   # list files with extension .fastq and store in a file called fastq_list</p>
+<h1 id="use-to-append-to-a-file-rather-than-overwriting">use &gt;&gt; to append to a file rather than overwriting</h1>
+<p>$ ls <em>.txt &gt; file_list      # list all .txt files to file_list
+$ ls </em>.tsv &gt;&gt; file_list # add all .tsv files to file_list instead of deleting the previous file</p>
+<h1 id="use-called-a-pipe-to-join-multiple-commands-the-output-of-the-previous-command-becomes-the-input-of-the-next-command">use | (called a pipe) to join multiple commands. The output of the previous command becomes the input of the next command</h1>
+<p>$ ls *.fastq | wc –l    # list all .fastq files and count their number
+$ cut –f 3 file.tsv | sort &gt; sorted.txt # extract 3rd column from file.tsv, sort the column and store in sorted.txt</p>
+<p>Miscellaneous</p>
+<h1 id="clear-the-screen">clear the screen</h1>
+<p>$ clear</p>
+<h1 id="create-a-new-empty-file">create a new empty file</h1>
+<p>$ touch file1</p>
+<h1 id="rewrite-output-back-into-original-file-using-sponge">rewrite output back into original file using sponge</h1>
+<h1 id="note-this-will-change-the-original-file-and-it-cannot-be-regained">note - this will change the original file and it cannot be regained</h1>
+<p>$ cut –f 1-3 file.tsv | sponge file.tsv # retain only the first three columns of file.tsv</p>
+<h1 id="unzip-a-zip-file">unzip a .zip file</h1>
+<p>$ unzip archive.zip</p>
+<h1 id="zip-a-file-using-gzip-compression-adds-a-gz-extension">zip a file using gzip compression (adds a .gz extension)</h1>
+<p>$ gzip reads.fastq</p>
+<h1 id="unzip-a-gz-file">unzip a .gz file</h1>
+<p>$ gunzip reads.fastq.gz</p>
+<h1 id="print-a-gz-file-like-cat-but-for-gz-files">print a .gz file (like cat, but for .gz files)</h1>
+<p>$ zcat reads.fastq.gz
+$ zcat reads.fastq.gz | more    # print a .gz file page by page</p>
 
 
 
