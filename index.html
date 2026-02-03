@@ -298,19 +298,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-introduction" class="md-nav__link">
+  <a href="#1-introduction-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Introduction
+      1. Introduction &amp; Purpose
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Introduction">
+    <nav class="md-nav" aria-label="1. Introduction &amp; Purpose">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-brief-history-of-linux" class="md-nav__link">
+  <a href="#a-brief-history" class="md-nav__link">
     <span class="md-ellipsis">
-      A Brief History of Linux
+      A Brief History
     </span>
   </a>
   
@@ -331,64 +331,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-the-terminal-shell-and-cli" class="md-nav__link">
+  <a href="#3-linux-file-hierarchy-structure-fhs" class="md-nav__link">
     <span class="md-ellipsis">
-      3. The Terminal, Shell, and CLI
+      3. Linux File Hierarchy Structure (FHS)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-linux-file-hierarchy-structure-fhs" class="md-nav__link">
+  <a href="#4-navigating-the-filesystem" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Linux File Hierarchy Structure (FHS)
+      4. Navigating the Filesystem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-navigating-the-filesystem" class="md-nav__link">
+  <a href="#5-linux-command-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Navigating the Filesystem
+      5. Linux Command Reference
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-linux-command-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Linux Command Reference
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Linux Command Reference">
+    <nav class="md-nav" aria-label="5. Linux Command Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#file-commands" class="md-nav__link">
+  <a href="#essential-file-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      File Commands
+      Essential File Commands
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-search" class="md-nav__link">
+  <a href="#shortcuts-help" class="md-nav__link">
     <span class="md-ellipsis">
-      System &amp; Search
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shortcuts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shortcuts
+      Shortcuts &amp; Help
     </span>
   </a>
   
@@ -416,30 +398,23 @@
 
 
 <h1 id="linux-hpc-a-quick-guided-tour">Linux &amp; HPC: A Quick Guided Tour</h1>
-<h2 id="1-introduction">1. Introduction</h2>
-<p>With the constant evolution of scientific knowledge, biologists face an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. While graphical interfaces exist, many operations are more efficiently handled with the <strong>Linux Shell</strong>, which acts as both a command-line interface and a scripting language.</p>
-<h3 id="a-brief-history-of-linux">A Brief History of Linux</h3>
-<p>Linux evolved from a kernel created by <strong>Linus Torvalds</strong> in 1991. It is a family of free and open-source operating systems known for flexibility, stability, and strong security. Complete systems, known as <strong>distributions</strong> or <strong>distros</strong>, combine the kernel with software packages (e.g., Ubuntu, Fedora, CentOS).</p>
+<h2 id="1-introduction-purpose">1. Introduction &amp; Purpose</h2>
+<p>Biologists face an increasing need for bioinformatics skills to deal with high-throughput data storage, retrieval, and analysis. While graphical interfaces exist, many operations are more efficiently handled with the <strong>Linux Shell</strong>, which acts as both a command-line interface and a scripting language.</p>
+<h3 id="a-brief-history">A Brief History</h3>
+<p>Linux evolved from a kernel created by <strong>Linus Torvalds</strong> in 1991. It is a family of free and open-source operating systems known for flexibility, stability, and strong security.</p>
 <hr />
 <h2 id="2-architecture-of-linux">2. Architecture of Linux</h2>
 <p>Linux has a layered structure that defines how its components interact to manage resources efficiently.</p>
-<ol>
+<ul>
 <li><strong>Kernel:</strong> The core that manages hardware resources and controls communication.</li>
 <li><strong>System Libraries:</strong> Pre-written code that allows applications to interact with the kernel.</li>
 <li><strong>Shell:</strong> The CLI that interprets user commands and serves as a bridge to the kernel.</li>
 <li><strong>Hardware Layer:</strong> Physical components like RAM, HDD, and CPU.</li>
 <li><strong>System Utility:</strong> Tools provided by the OS to manage software and system performance.</li>
-</ol>
+</ul>
 <hr />
-<h2 id="3-the-terminal-shell-and-cli">3. The Terminal, Shell, and CLI</h2>
-<p>While often used interchangeably, there are subtle differences:
-* <strong>Terminal:</strong> An input/output environment presenting a text-only window.
-* <strong>Shell:</strong> A program that interprets your commands (e.g., Bash).
-* <strong>CLI:</strong> The user interface that processes commands and outputs results.</p>
-<p>To execute a command, type it into the prompt and press <strong>ENTER</strong>.</p>
-<hr />
-<h2 id="4-linux-file-hierarchy-structure-fhs">4. Linux File Hierarchy Structure (FHS)</h2>
-<p>The FHS defines the directory structure for nearly all Linux distributions. Everything starts from the <strong>Root directory (/)</strong>.</p>
+<h2 id="3-linux-file-hierarchy-structure-fhs">3. Linux File Hierarchy Structure (FHS)</h2>
+<p>Everything in Linux starts from the <strong>Root directory (/)</strong>. The FHS defines the directory structure for nearly all Linux distributions.</p>
 <table>
 <thead>
 <tr>
@@ -450,32 +425,80 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>/bin</strong></td>
-<td style="text-align: left;">Important binary applications (standard commands).</td>
+<td style="text-align: left;">Important binary applications.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>/home</strong></td>
-<td style="text-align: left;">Where your personal data lives.</td>
+<td style="text-align: left;"><strong>/boot</strong></td>
+<td style="text-align: left;">Boot configuration files, kernels, and files needed at boot time.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>/root</strong></td>
-<td style="text-align: left;">Home directory for the administrator (root user).</td>
+<td style="text-align: left;"><strong>/dev</strong></td>
+<td style="text-align: left;">System device files.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>/etc</strong></td>
-<td style="text-align: left;">System configuration files and startup scripts.</td>
+<td style="text-align: left;">Configuration files, startup scripts, etc..</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/home</strong></td>
+<td style="text-align: left;">List of home directories for different users.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/lib</strong></td>
+<td style="text-align: left;">System libraries and shared libraries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/lost+found</strong></td>
+<td style="text-align: left;">A system for files that exist under the root (/) directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/media</strong></td>
+<td style="text-align: left;">Automatically mounted partitions (CDs, digital cameras, etc.).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/mnt</strong></td>
+<td style="text-align: left;">Manually mounted filesystems on your hard drive.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/opt</strong></td>
+<td style="text-align: left;">3rd party applications to be installed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/proc</strong></td>
+<td style="text-align: left;">Information about the system state and running processes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/root</strong></td>
+<td style="text-align: left;">Root user's home directory.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/sbin</strong></td>
+<td style="text-align: left;">Important system binaries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/srv</strong></td>
+<td style="text-align: left;">Files that are served to other systems.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/sys</strong></td>
+<td style="text-align: left;">System files.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>/tmp</strong></td>
-<td style="text-align: left;">Temporary files (often cleared on reboot).</td>
+<td style="text-align: left;">Temporary files.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>/usr</strong></td>
+<td style="text-align: left;">Applications and files available for all users to access.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>/var</strong></td>
-<td style="text-align: left;">Variable files like logs and databases.</td>
+<td style="text-align: left;">Variable files such as logs and databases.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="5-navigating-the-filesystem">5. Navigating the Filesystem</h2>
+<h2 id="4-navigating-the-filesystem">4. Navigating the Filesystem</h2>
 <p>Directories are like <strong>places</strong>. At any time, you are in exactly one place called your <strong>Current Working Directory</strong>.</p>
 <ul>
 <li><strong><code>pwd</code></strong>: <strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory (Shows your current "address").</li>
@@ -485,11 +508,10 @@
 <li><code>cd ~</code> takes you to your <strong>Home</strong> directory.</li>
 </ul>
 </li>
-<li><strong>Wildcards (<code>*</code>)</strong>: Match zero or more characters (e.g., <code>ls *.fastq</code>).</li>
 </ul>
 <hr />
-<h2 id="6-linux-command-reference">6. Linux Command Reference</h2>
-<h3 id="file-commands">File Commands</h3>
+<h2 id="5-linux-command-reference">5. Linux Command Reference</h2>
+<h3 id="essential-file-commands">Essential File Commands</h3>
 <table>
 <thead>
 <tr>
@@ -499,60 +521,33 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>ls -al</code></td>
+<td style="text-align: left;"><strong><code>ls -al</code></strong></td>
 <td style="text-align: left;">Formatted listing including hidden files.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>mkdir &lt;dir&gt;</code></td>
+<td style="text-align: left;"><strong><code>mkdir &lt;dir&gt;</code></strong></td>
 <td style="text-align: left;">Create a new directory.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>head</code> / <code>tail</code></td>
+<td style="text-align: left;"><strong><code>head</code> / <code>tail</code></strong></td>
 <td style="text-align: left;">Output the first or last 10 lines of a file.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>cp</code> / <code>mv</code></td>
+<td style="text-align: left;"><strong><code>cp</code> / <code>mv</code></strong></td>
 <td style="text-align: left;">Copy or move/rename a file.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>rm -rf</code></td>
+<td style="text-align: left;"><strong><code>rm -rf</code></strong></td>
 <td style="text-align: left;">Forcefully remove a directory and its contents.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="system-search">System &amp; Search</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Command</th>
-<th style="text-align: left;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>grep &lt;pat&gt;</code></td>
-<td style="text-align: left;">Search for a pattern in a file.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>top</code></td>
-<td style="text-align: left;">Display all running processes.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>chmod</code></td>
-<td style="text-align: left;">Change file permissions.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>df -h</code></td>
-<td style="text-align: left;">Show disk usage in human-readable format.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="shortcuts">Shortcuts</h3>
+<h3 id="shortcuts-help">Shortcuts &amp; Help</h3>
 <ul>
 <li><strong><code>Ctrl + C</code></strong>: Halts the current command.</li>
 <li><strong><code>Ctrl + R</code></strong>: Search your command history.</li>
 <li><strong><code>Tab</code></strong>: Autocomplete file or directory names.</li>
-<li><strong><code>!!</code></strong>: Repeat the last command.</li>
+<li><strong><code>man &lt;command&gt;</code></strong>: Show the manual for a command (Type <strong>q</strong> to quit).</li>
 </ul>
 
 
