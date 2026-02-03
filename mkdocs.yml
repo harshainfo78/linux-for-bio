@@ -1,0 +1,7 @@
+site_name: "Linux & HPC: A Quick Guided Tour (IBDC)"
+
+theme:
+  name: material
+
+nav:
+  - Workshop Manual: index.md
